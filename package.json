@@ -1,0 +1,19 @@
+{
+  "name": "custom-store",
+  "version": "1.0.0",
+  "description": "A store to custom configure your wrist rest",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lumber-exotics/custom-store.git"
+  },
+  "author": "Mike Huynh, Steven Jung, Jonathan Peralez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lumber-exotics/custom-store/issues"
+  },
+  "homepage": "https://github.com/lumber-exotics/custom-store#readme"
+}
