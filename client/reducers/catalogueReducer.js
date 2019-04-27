@@ -24,7 +24,7 @@ const catalogueReducer = (state = initialState, action) => {
         ...state,
         wood: action.payload
       };
-    case types.:
+    case types.GETSTAIN:
       return {
         ...state,
         stain: action.payload
