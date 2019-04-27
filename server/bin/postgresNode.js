@@ -9,9 +9,15 @@ const pool = new Pool({
   password: config.password,
   port: 5432,
 })
-// pool.query('SELECT NOW()', (err, res) => {
-//   console.log(err, res)
-//   pool.end()
+
+// const WOOD = [ash, birch, cherry, maple, pine, redoak];
+// const Stain = [];
+
+// pool.query(`INSERT INTO wood ("TYPE", "IMAGEURL", "DESCRIPTION", "PRICE", "QUANTITY") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING *;`, values, (err, res) => {
+//   if (err) {
+//     console.log(err)
+//   }
+
 // })
 
 module.exports = pool;
