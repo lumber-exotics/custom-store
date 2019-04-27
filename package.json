@@ -15,5 +15,14 @@
   "bugs": {
     "url": "https://github.com/lumber-exotics/custom-store/issues"
   },
-  "homepage": "https://github.com/lumber-exotics/custom-store#readme"
+  "homepage": "https://github.com/lumber-exotics/custom-store#readme",
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-router-dom": "^5.0.0",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "redux-devtools-extension": "^2.13.8"
+  }
 }
