@@ -4,7 +4,8 @@
   "description": "A store to custom configure your wrist rest",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server/bin/www.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,10 @@
   },
   "homepage": "https://github.com/lumber-exotics/custom-store#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.16.4",
+    "pg": "^7.10.0",
     "react": "^16.8.6",
     "react-router-dom": "^5.0.0",
     "redux": "^4.0.1",
