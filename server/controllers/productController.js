@@ -1,9 +1,17 @@
 const pool = require('../bin/postgresNode.js');
-const productModel = require('../models/products.js')
+//const productModel = require('../models/products.js')
 const productController = {};
 
 productController.createProduct = (req, res, next) => {
-  res.send('p controller reached');
+
+  pool.query('SELECT * FROM wood', (err, result) => {
+    if (err) {
+      throw err
+    }
+    //console.log(result);
+    res.send(result);
+  });
+  
 }
 
 module.exports = productController;
