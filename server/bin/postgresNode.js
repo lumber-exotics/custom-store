@@ -1,3 +1,4 @@
+// 1) connect to DB
 const { Pool } = require('pg');
 const config = require ('../../config/config.json');
 
