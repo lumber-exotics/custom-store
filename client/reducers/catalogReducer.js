@@ -1,29 +1,28 @@
 import * as types from '../constants/actionTypes';
 
-
 const initialState = {
   wood: [{
     type: 'maple',
     image: 'something.jpg',
     description: 'rough',
     price: '250',
-    instock: true
+    inStock: true
   }],
   stain: [{
     type: 'ashe',
     image: 'something.jpg',
     description: 'ashy',
     price: '150',
-    instock: true
+    inStock: true
   }]
 };
 
-const catalogueReducer = (state = initialState, action) => {
+const catalogReducer = (state = initialState, action) => {
   switch (action.type) {
-    case types.GETWOOD:
+    case types.GET_WOOD:
       return {
         ...state,
-        //wood: action.payload
+        wood: action.payload
       };
     case types.GETSTAIN:
       return {
@@ -33,5 +32,6 @@ const catalogueReducer = (state = initialState, action) => {
     default:
       return state;
   }
-}
-export default catalogueReducer;
+};
+
+export default catalogReducer;

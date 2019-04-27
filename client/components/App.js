@@ -6,11 +6,9 @@ import WoodContainer from '../containers/woodContainer';
 
 const App = () => {
   return (
-    <Router>
       <div>
         <WoodContainer />
       </div>
-    </Router>
   );
 };
 

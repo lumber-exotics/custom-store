@@ -1,8 +1,6 @@
 import React from 'react';
-import Header from './header';
 
-
-const WoodBox = (props) => {
+const WoodBox = props => {
   return (
     <div>
       <ul>

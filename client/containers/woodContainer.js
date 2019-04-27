@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import {withRouter} from 'react-router';
+// import {withRouter} from 'react-router';
 import * as actions from '../actions/index';
 import WoodBox from '../components/woodbox';
 
@@ -19,7 +19,7 @@ class WoodContainer extends Component {
 }
 
 const mapStateToProps = store => ({
-    wood: store.catalogue.wood  // From our combinedReducer (index.js), catalogue -> which has the value of our catalogueReducer -> which lives in catalogueReducer.js
+    wood: store.catalog.wood
 });
 
 
@@ -29,4 +29,5 @@ const mapDispatchToProps = dispatch => ({
 });
 
 // This is how are container knows what method is has available to it in its access to the store
+
 export default connect(mapStateToProps, mapDispatchToProps)(WoodContainer);

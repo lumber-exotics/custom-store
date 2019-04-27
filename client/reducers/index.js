@@ -1,9 +1,9 @@
 // Merges all of our reducers, tells us how our stores accesses them
 import { combineReducers } from 'redux'
-import catalogueReducer from './catalogueReducer'
+import catalogReducer from './catalogReducer'
 
 const reducers = combineReducers({
-  catalogue: catalogueReducer,
+  catalog: catalogReducer,
 });
 
 export default reducers;
