@@ -1,9 +1,12 @@
 import React from 'react';
 
+
+
+
 const WoodBox = props => {
   return (
     <div>
-      <ul>
+      <ul id={props.id} onClick={(e) => { props.clickHandler(e) }}>
         <li> {props.type} </li>
         <li> {props.image} </li>
         <li> {props.description} </li>

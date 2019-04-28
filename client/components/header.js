@@ -4,7 +4,6 @@ const headerStyle = {
   color: 'brown'
 }
 
-
 const Header = () => {
   return (
       <div>
