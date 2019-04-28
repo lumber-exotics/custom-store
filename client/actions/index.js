@@ -16,3 +16,9 @@ export const getWood = value => {
     // }],
   }
 };
+
+export const submitOrder = () => {
+  return {
+    type: types.SUBMIT_ORDER
+  }
+};
