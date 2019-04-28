@@ -30,3 +30,9 @@ export const getStain = value => {
     }],
   }
 };
+
+export const submitOrder = () => {
+  return {
+    type: types.SUBMIT_ORDER
+  }
+}
