@@ -5,14 +5,28 @@ import * as types from '../constants/actionTypes';
 
 export const getWood = value => {
   return {
+    type: types.GET_WOOD,
+    payload: value,
+    payload:  [{
+      type: 'walnut',
+      image: 'testIMG',
+      description: 'smooth',
+      price: '300',
+      inStock: true,
+    }],
+  }
+};
+
+export const getStain = value => {
+  return {
     type: types.GET_STAIN,
-    payload: value
-    // payload:  [{
-    //   type: 'walnut',
-    //   image: 'testIMG',
-    //   description: 'smooth',
-    //   price: '300',
-    //   instock: true
-    // }],
+    payload: value,
+    payload:  [{
+      type: 'ashe',
+      image: 'test.jpg',
+      description: 'smoky',
+      price: '100',
+      inStock: true,
+    }],
   }
 };

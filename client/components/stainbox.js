@@ -1,6 +1,6 @@
 import React from 'react';
 
-const WoodBox = props => {
+const StainBox = props => {
   return (
     <div>
       <ul>
@@ -14,4 +14,4 @@ const WoodBox = props => {
   );
 };
 
-export default WoodBox;
+export default StainBox;
