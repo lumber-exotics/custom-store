@@ -5,11 +5,15 @@ import Woodbox from './woodbox';
 import WoodContainer from '../containers/woodContainer';
 import Cart from './cart';
 
+import StainContainer from '../containers/stainContainer';
+
 const App = () => {
   return (
       <div>
+        <Header />
         <WoodContainer />
-        <Cart />>
+        <Cart />
+        <StainContainer />
       </div>
   );
 };

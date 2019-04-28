@@ -24,10 +24,10 @@ const catalogReducer = (state = initialState, action) => {
         ...state,
         wood: action.payload
       };
-    case types.GETSTAIN:
+    case types.GET_STAIN:
       return {
         ...state,
-        //stain: action.payload
+        stain: action.payload
         };
     default:
       return state;
