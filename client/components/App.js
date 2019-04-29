@@ -1,20 +1,24 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from './header';
-import Woodbox from './woodbox';
+import Home from './home';
 import WoodContainer from '../containers/woodContainer';
-import Cart from './cart';
-
 import StainContainer from '../containers/stainContainer';
+import Cart from '../containers/cart';
 
 const App = () => {
   return (
+    <Router>
       <div>
-        <Header />
-        <WoodContainer />
-        <Cart />
-        <StainContainer />
+        <Header/>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/wood" component={WoodContainer} />>
+          <Route exact path="/stain" component={StainContainer} />
+          <Route exact path="/cart" component={Cart} />
+        </Switch>
       </div>
+    </Router>
   );
 };
 

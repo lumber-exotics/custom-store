@@ -152,12 +152,11 @@ function createStainTableAndInsertValues() {
 function createCartTable() {
   pool.query(cartTableQuery, (err, res) => {
     if (err) console.log(err);
-  })
+  });
 }
-
 
 createWoodTableAndInsertValues();
 createStainTableAndInsertValues();
-createCartTable()
+createCartTable();
 
 module.exports = pool;

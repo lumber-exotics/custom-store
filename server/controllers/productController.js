@@ -10,8 +10,7 @@ productController.woodQuery = (req, res, next) => {
     }
     res.send(result.rows);
   });
-
-}
+};
 
 productController.stainQuery = (req, res, next) => {
 
@@ -21,31 +20,11 @@ productController.stainQuery = (req, res, next) => {
     }
     res.send(result.rows);
   });
-
-}
+};
 
 productController.createCart = (req, res, next) => {
-  const woodData = {};
-  const stainData = {};
-
-  const imagineBody = {
-    'orderID': '',
-    'customer': '',
-    'wood': 'ash',
-    'stain': 'Burgundy',
-    'email': '',
-    'total': ''
-  }
-  pool.query('SELECT * FROM wood', (err, result) => {
-    woodData = result;
-  })
-  console.log(woodData);
-  const basePrice = 0;
-  const woodPrice = 0;
-  const stainPrice = 0;
-  const total = basePrice + woodPrice + stainPrice;
-  
-
-}
+  console.log(req.body)
+    //console.log(result);
+};
 
 module.exports = productController;
