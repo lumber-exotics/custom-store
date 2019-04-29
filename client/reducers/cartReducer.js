@@ -4,7 +4,7 @@ const initialState = {
   wood: {type: null, price: 0},
   stain: {type: null, price: 0},
   base: 50,
-  total: this.base
+  total: 0
 };
 
 function calcTotal(base, woodPrice, stainPrice) {
