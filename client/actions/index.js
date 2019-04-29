@@ -27,7 +27,7 @@ export const getWood = value => {
       type: 'maple',
       image: 'something.jpg',
       description: 'rough',
-      price: '250',
+      price: '400',
       inStock: true
     }, {
       type: 'ash',
@@ -62,5 +62,19 @@ export const getStain = value => {
 export const submitOrder = () => {
   return {
     type: types.SUBMIT_ORDER
+  }
+};
+
+export const selectWood = (value) => {
+  // console.log('value', value);
+  return {
+    type: types.SELECT_WOOD,
+    payload: value
+  }
+};
+export const selectStain = (value) => {
+  return {
+    type: types.SELECT_STAIN,
+    payload: value
   }
 };

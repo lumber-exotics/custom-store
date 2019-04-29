@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-// import {withRouter} from 'react-router';
+import {Link} from 'react-router';
 import * as actions from '../actions/index';
 import ProductDisplay from '../components/productDisplay';
 
@@ -23,7 +23,17 @@ class WoodContainer extends Component {
     this.props.getWood();
   }
 
-  selectItemClickHandler(e) {  // handleClick will setState to NOT selected when clicked.
+  selectItemClickHandler(e) {
+    const payloadObj ={};
+    payloadObj.type = e.currentTarget.id;
+    console.log('wood types', this.props.wood);
+    this.props.wood.forEach(item => {
+      if (payloadObj.type === item.type) {
+        payloadObj.price = parseInt(item['price']);
+      }
+    });
+    // select wood type for cart
+    this.props.selectWood(payloadObj);
     this.setState({
       selectedItem: e.currentTarget.id
     });
@@ -38,6 +48,9 @@ class WoodContainer extends Component {
       <div>
       <h1>Select your hardwood type:</h1>
         {woodBoxes}
+      <button>
+
+      </button>
       </div>
     );
   }
@@ -51,6 +64,7 @@ const mapStateToProps = store => ({
 const mapDispatchToProps = dispatch => ({
   // getWood: val => dispatch(actions.getWood(val))
   getWood: () =>  dispatch(actions.getWood()),
+  selectWood: (value) => dispatch(actions.selectWood(value))
 });
 
 // This is how are container knows what method is has available to it in its access to the store

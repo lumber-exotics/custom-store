@@ -24,6 +24,16 @@ class StainContainer extends Component {
   }
 
   selectItemClickHandler(e) {  // handleClick will setState to NOT selected when clicked.
+    const payloadObj ={};
+    payloadObj.type = e.currentTarget.id;
+    console.log('wood types', this.props.stain);
+    this.props.stain.forEach(item => {
+      if (payloadObj.type === item.type) {
+        payloadObj.price = parseInt(item['price']);
+      }
+    });
+    // select wood type for cart
+    this.props.selectStain(payloadObj);
     this.setState({
       selectedItem: e.currentTarget.id
     });
@@ -32,7 +42,7 @@ class StainContainer extends Component {
   render() {
     // console.log(this.props.stain);
     const stainBoxes = this.props.stain.map(el=> (
-      <ProductDisplay key={el.type} type={el.type} image={el.image} description={el.description} price={el.price} inStock={el.inStock} selectedItem={this.state.selectedItem} selectItemClickHandler={this.selectItemClickHandler} />
+      <ProductDisplay key={el.type} type={el.type} image={el.image} description={el.description} price={el.price} inStock={el.inStock} selectedItem={this.state.selectedItem} selectItemClickHandler={this.selectItemClickHandler}/>
     ));
 
     return (
@@ -52,9 +62,9 @@ const mapStateToProps = store => ({
 // Runs our action creator
 const mapDispatchToProps = dispatch => ({
   // getWood: val => dispatch(actions.getWood(val))
-  getStain: () =>  dispatch(actions.getStain())
+  getStain: () =>  dispatch(actions.getStain()),
+  selectStain: (value) => dispatch(actions.selectStain(value))
 });
 
 // This is how are container knows what method is has available to it in its access to the store
-
 export default connect(mapStateToProps, mapDispatchToProps)(StainContainer);

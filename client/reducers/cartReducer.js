@@ -12,11 +12,12 @@ function calcTotal(base, woodPrice, stainPrice) {
 }
 
 const cartReducer = (state = initialState, action) => {
+  console.log('action.payload', action.payload);
   switch(action.type) {
     case types.SELECT_WOOD:
       return {
         ...state,
-        wood: {type: action.payload.type, price: action.payload.price},
+        wood: {type: action.payload, price: action.payload.price},
         total: calcTotal(state.base, action.payload.price, state.stain.price)
       };
     case types.SELECT_STAIN:
