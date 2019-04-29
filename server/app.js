@@ -23,10 +23,10 @@ app.use(cookieParser())
 
 
 // app.use('/build', express.static(path.join(__dirname, '../build')));
-app.use('/api/products', productRoute);
+app.use('/api', productRoute);
 
 app.use('/', (req, res) => {
-  //res.sendFile(path.join(__dirname, 'index.html'));
+ // res.sendFile(path.join(__dirname, '../index.html'));
   res.send('reached root route');
 });
 
