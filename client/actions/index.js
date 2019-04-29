@@ -6,7 +6,6 @@ import * as types from '../constants/actionTypes';
 export const getWood = value => {
   return {
     type: types.GET_WOOD,
-    payload: value,
     payload:  [{
       type: 'walnut',
       image: 'testIMG',
@@ -20,7 +19,6 @@ export const getWood = value => {
 export const getStain = value => {
   return {
     type: types.GET_STAIN,
-    payload: value,
     payload:  [{
       type: 'ashe',
       image: 'test.jpg',
@@ -35,4 +33,4 @@ export const submitOrder = () => {
   return {
     type: types.SUBMIT_ORDER
   }
-}
+};
