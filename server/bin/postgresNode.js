@@ -155,7 +155,6 @@ function createCartTable() {
   })
 }
 
-
 createWoodTableAndInsertValues();
 createStainTableAndInsertValues();
 createCartTable()
