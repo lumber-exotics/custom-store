@@ -100,6 +100,16 @@ const stainTableInsertQuery =
   "price" numeric(10,2) NOT NULL,
   "inStock" boolean)`;
 
+  const cartTableQuery =
+  `CREATE TABLE IF NOT EXISTS cart(
+  "_id" serial PRIMARY KEY NOT NULL,
+  "orderID" integer NOT NULL,
+  "customer" varchar,
+  "wood" varchar,
+  "stain" varchar(50) NOT NULL,
+  "email" varchar,
+  "total" numeric(10,2))`;
+
 
 function createWoodTableAndInsertValues() {
   pool.query(createWoodTable, (err, res) => {
@@ -139,8 +149,15 @@ function createStainTableAndInsertValues() {
   });
 }
 
+function createCartTable() {
+  pool.query(cartTableQuery, (err, res) => {
+    if (err) console.log(err);
+  })
+}
+
 
 createWoodTableAndInsertValues();
 createStainTableAndInsertValues();
+createCartTable()
 
 module.exports = pool;
