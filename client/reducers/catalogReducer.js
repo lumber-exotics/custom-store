@@ -1,14 +1,14 @@
 import * as types from '../constants/actionTypes';
 
 const initialState = {
-  // wood: [{
-  //   type: 'maple',
-  //   image: 'something.jpg',
-  //   description: 'rough',
-  //   price: '250',
-  //   inStock: true
-  // }],
-  wood: [],
+  wood: [{
+    type: 'maple',
+    image: 'something.jpg',
+    description: 'rough',
+    price: '250',
+    inStock: true
+  }],
+  // wood: [],
   stain: [{
     type: 'ashe',
     image: 'something.jpg',

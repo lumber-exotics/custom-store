@@ -134,8 +134,8 @@ function createStainTableAndInsertValues() {
   });
 }
 
-createWoodTableAndInsertValues();
-createStainTableAndInsertValues();
+// createWoodTableAndInsertValues();
+// createStainTableAndInsertValues();
 
 module.exports = pool;
   

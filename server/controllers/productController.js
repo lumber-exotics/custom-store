@@ -9,9 +9,8 @@ productController.createProduct = (req, res, next) => {
       throw err
     }
     //console.log(result);
-    res.send(result);
+    res.send(result.rows);
   });
-  
-}
+};
 
 module.exports = productController;

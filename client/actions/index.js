@@ -3,34 +3,37 @@ import axios from 'axios';
 
 import * as types from '../constants/actionTypes';
 
-export const getWood = () => {
-  return (dispatch) => {
-    axios.get('/api/products')
-      .catch(err => {
-        console.log(err);
-      })
-      .then(response => {
-        dispatch({
-          type: types.GET_WOOD,
-          payload: response
-        })
-      });
-  }
-};
-
-// export const getWood = value => {
-//   return {
-//     type: types.GET_WOOD,
-//     payload:  [{
-//       type: 'walnut',
-//       image: 'testIMG',
-//       description: 'smooth',
-//       price: '300',
-//       inStock: true,
-//     }],
+// async action creator
+// export const getWood = () => {
+//   return (dispatch) => {
+//     axios.get('/api/products')
+//       .catch(err => {
+//         console.log(err);
+//       })
+//       .then(response => {
+//         dispatch({
+//           type: types.GET_WOOD,
+//           payload: response.data
+//         })
+//       });
 //   }
 // };
 
+// test action creator - wood
+export const getWood = value => {
+  return {
+    type: types.GET_WOOD,
+    payload:  [{
+      type: 'walnut',
+      image: 'testIMG',
+      description: 'smooth',
+      price: '300',
+      inStock: true,
+    }],
+  }
+};
+
+// test action creator - stain
 export const getStain = value => {
   return {
     type: types.GET_STAIN,

@@ -1,9 +1,6 @@
 import React from 'react';
 
-
-
-
-const WoodBox = props => {
+const ProductDisplay = props => {
   return (
     <div>
       <ul id={props.id} onClick={(e) => { props.clickHandler(e) }}>
@@ -17,4 +14,4 @@ const WoodBox = props => {
   );
 };
 
-export default WoodBox;
+export default ProductDisplay;
