@@ -10,8 +10,7 @@ productController.woodQuery = (req, res, next) => {
     }
     res.send(result.rows);
   });
-
-}
+};
 
 productController.stainQuery = (req, res, next) => {
 
@@ -21,13 +20,11 @@ productController.stainQuery = (req, res, next) => {
     }
     res.send(result.rows);
   });
-
-}
+};
 
 productController.createCart = (req, res, next) => {
   console.log(req.body)
     //console.log(result);
-  });
 };
 
 module.exports = productController;
