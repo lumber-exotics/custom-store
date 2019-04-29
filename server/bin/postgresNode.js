@@ -83,7 +83,7 @@ let stain = [{TYPE: 'Burgundy',
                 PRICE: 25.99,
                 IN_STOCK: true}];
 
-const tableQuery =
+const createTable =
   `CREATE TABLE IF NOT EXISTS wood(
 "_id" serial PRIMARY KEY NOT NULL,
   "TYPE" varchar(50) NOT NULL,
@@ -91,6 +91,14 @@ const tableQuery =
       "DESCRIPTION" varchar,
         "PRICE" numeric(10,2) NOT NULL,
           "IN_STOCK" true)`;
+
+
+  pool.query(createTable, (err, result) => {
+    if(err){
+      console.log(err);
+    }
+    console.log('created table okay!');
+  });
 
 for(let i = 0; i < wood.length; i++){
   let values = [];
@@ -107,7 +115,7 @@ for(let i = 0; i < wood.length; i++){
   })
 
 
-const tableQuery =
+const createTable =
 `CREATE TABLE IF NOT EXISTS stain(
 "_id" serial PRIMARY KEY NOT NULL,
 "TYPE" varchar(50) NOT NULL,
@@ -115,6 +123,13 @@ const tableQuery =
     "DESCRIPTION" varchar,
       "PRICE" numeric(10,2) NOT NULL,
         "IN_STOCK" true)`;
+
+  pool.query(createTable, (err, result) => {
+    if(err){
+      console.log(err);
+    }
+    console.log('created table okay!');
+  });
 
 for(let i = 0; i < stain.length; i++){
 let values = [];
