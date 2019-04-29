@@ -16,36 +16,28 @@ class StainContainer extends Component {
     this.state = {
       selectedStainType: false, // initial state when wood has not been selected.
     };
-    this.handleClick = this.handleClick.bind(this); // Bind handleclick to Wood Container
+    this.selectItemClickHandler = this.selectItemClickHandler.bind(this); // Bind handleclick to Wood Container
   }
 
   componentDidMount() {
-    this.props.getWood();
+    this.props.getStain();
   }
 
-  handleClick(e) {  // handleClick will setState to NOT selected when clicked.
-    // this.setState(state => ({
-    //   selectedWoodType: !state.selectedWoodType
-    // }));
-    e.stopPropagation();
-    console.log(e.target.id);
+  selectItemClickHandler(e) {  // handleClick will setState to NOT selected when clicked.
+    this.setState({
+      selectedItem: e.currentTarget.id
+    });
   }
 
   render() {
-    /*let woodBoxes;
-    if (this.props.wood) {
-      woodBoxes = this.props.wood.map(el=> (
-        <WoodBox key={el.type} image={el.image} description={el.description} price={el.price} inStock={el.inStock}/>
-      ));
-    } else {
-      woodBoxes = <div>Loading</div>;
-    }*/
+    // console.log(this.props.stain);
     const stainBoxes = this.props.stain.map(el=> (
-      <ProductDisplay key={el.type} image={el.image} description={el.description} price={el.price} inStock={el.inStock}/>
+      <ProductDisplay key={el.type} type={el.type} image={el.image} description={el.description} price={el.price} inStock={el.inStock} selectedItem={this.state.selectedItem} selectItemClickHandler={this.selectItemClickHandler} />
     ));
 
     return (
       <div>
+        <h1>Select your stain</h1>
         {stainBoxes}
       </div>
     );
@@ -60,7 +52,7 @@ const mapStateToProps = store => ({
 // Runs our action creator
 const mapDispatchToProps = dispatch => ({
   // getWood: val => dispatch(actions.getWood(val))
-  getWood: () =>  dispatch(actions.getWood())
+  getStain: () =>  dispatch(actions.getStain())
 });
 
 // This is how are container knows what method is has available to it in its access to the store

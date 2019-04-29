@@ -1,21 +1,35 @@
 import * as types from '../constants/actionTypes';
 
 const initialState = {
-  wood: [{
+  wood: [ {
     type: 'maple',
     image: 'something.jpg',
     description: 'rough',
     price: '250',
     inStock: true
-  }],
-  // wood: [],
-  stain: [{
-    type: 'ashe',
+  }, {
+    type: 'ash',
     image: 'something.jpg',
-    description: 'ashy',
-    price: '150',
+    description: 'simple wood',
+    price: '250',
     inStock: true
-  }]
+  } ],
+  // wood: [],
+  stain: [
+    {
+      type: 'red',
+      image: 'something.jpg',
+      description: 'red',
+      price: '150',
+      inStock: true
+    }, {
+      type: 'purple',
+      image: 'something.jpg',
+      description: 'purple',
+      price: '150',
+      inStock: true
+    }
+  ]
 };
 
 const catalogReducer = (state = initialState, action) => {
@@ -29,7 +43,7 @@ const catalogReducer = (state = initialState, action) => {
       return {
         ...state,
         stain: action.payload
-        };
+      };
     default:
       return state;
   }

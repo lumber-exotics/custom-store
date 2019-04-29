@@ -1,10 +1,10 @@
 import * as types from '../constants/actionTypes';
 
 const initialState = {
-  wood: {type: null, price: 0},
-  stain: {type: null, price: 0},
+  wood: {type: 'ash', price: 20},
+  stain: {type: 'purple', price: 30},
   base: 50,
-  total: 0
+  total: 100
 };
 
 function calcTotal(base, woodPrice, stainPrice) {
