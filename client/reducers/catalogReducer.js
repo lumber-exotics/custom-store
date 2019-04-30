@@ -1,21 +1,21 @@
 import * as types from '../constants/actionTypes';
 
 const initialState = {
-  wood: [ {
-    type: 'maple',
-    image: 'something.jpg',
-    description: 'rough',
-    price: '250',
-    inStock: true
-  }, {
-    type: 'ash',
-    image: 'something.jpg',
-    description: 'simple wood',
-    price: '250',
-    inStock: true
-  } ],
-  // wood: [],
-  stain: [
+  // wood: [ {
+  //   type: 'maple',
+  //   image: 'something.jpg',
+  //   description: 'rough',
+  //   price: '250',
+  //   inStock: true
+  // }, {
+  //   type: 'ash',
+  //   image: 'something.jpg',
+  //   description: 'simple wood',
+  //   price: '250',
+  //   inStock: true
+  // } ],
+  wood: [],
+  /*stain: [
     {
       type: 'red',
       image: 'something.jpg',
@@ -29,7 +29,8 @@ const initialState = {
       price: '150',
       inStock: true
     }
-  ]
+  ]*/
+  stain: []
 };
 
 const catalogReducer = (state = initialState, action) => {

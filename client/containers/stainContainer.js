@@ -30,7 +30,7 @@ class StainContainer extends Component {
     payloadObj.type = e.currentTarget.id;
     this.props.stain.forEach(item => {
       if (payloadObj.type === item.type) {
-        payloadObj.price = parseInt(item['price']);
+        payloadObj.price = parseFloat(item['price']);
       }
     });
     // select wood type for cart

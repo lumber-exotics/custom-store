@@ -4,23 +4,38 @@ import axios from 'axios';
 import * as types from '../constants/actionTypes';
 
 // async action creator
-// export const getWood = () => {
-//   return (dispatch) => {
-//     axios.get('/api/products')
-//       .catch(err => {
-//         console.log(err);
-//       })
-//       .then(response => {
-//         dispatch({
-//           type: types.GET_WOOD,
-//           payload: response.data
-//         })
-//       });
-//   }
-// };
+export const getWood = () => {
+  return (dispatch) => {
+    axios.get('/api/wood')
+      .catch(err => {
+        console.log(err);
+      })
+      .then(response => {
+        dispatch({
+          type: types.GET_WOOD,
+          payload: response.data
+        })
+      });
+  }
+};
+
+export const getStain = () => {
+  return (dispatch) => {
+    axios.get('/api/stain')
+      .catch(err => {
+        console.log(err);
+      })
+      .then(response => {
+        dispatch({
+          type: types.GET_STAIN,
+          payload: response.data
+        })
+      });
+  }
+};
 
 // test action creator - wood
-export const getWood = value => {
+/*export const getWood = value => {
   return {
     type: types.GET_WOOD,
     payload: [ {
@@ -37,10 +52,10 @@ export const getWood = value => {
       inStock: true
     } ],
   }
-};
+};*/
 
 // test action creator - stain
-export const getStain = value => {
+/*export const getStain = value => {
   return {
     type: types.GET_STAIN,
     payload: [ {
@@ -57,7 +72,7 @@ export const getStain = value => {
       inStock: true,
     } ],
   }
-};
+};*/
 
 export const submitOrder = () => {
   return {

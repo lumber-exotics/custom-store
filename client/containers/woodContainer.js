@@ -31,7 +31,7 @@ class WoodContainer extends Component {
     console.log('wood types', this.props.wood);
     this.props.wood.forEach(item => {
       if (payloadObj.type === item.type) {
-        payloadObj.price = parseInt(item[ 'price' ]);
+        payloadObj.price = parseFloat(item[ 'price' ]);
       }
     });
     // select wood type for cart
