@@ -73,6 +73,7 @@ export const selectWood = (value) => {
   }
 };
 export const selectStain = (value) => {
+  console.log(value);
   return {
     type: types.SELECT_STAIN,
     payload: value

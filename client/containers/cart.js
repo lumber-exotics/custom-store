@@ -12,7 +12,7 @@ class Cart extends Component {
         <h2>Your order</h2>
         <div>{this.props.selectedWood.type}</div>
         <div>{this.props.selectedStain.type}</div>
-        <div>{this.props.orderTotal}</div>
+        <div>{this.props.total}</div>
       </div>
     );
   }
@@ -21,7 +21,7 @@ class Cart extends Component {
 const mapStateToProps = store => ({
   selectedWood: store.cart.wood,
   selectedStain: store.cart.stain,
-  orderTotal: store.cart.total
+  total: store.cart.total
 });
 
 const mapDispatchToProps = dispatch => ({
