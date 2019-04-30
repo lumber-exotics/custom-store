@@ -8,7 +8,7 @@ const initialState = {
 };
 
 function calcTotal(base, woodPrice, stainPrice) {
-  return base + woodPrice + stainPrice;
+  return (base + woodPrice + stainPrice).toFixed(2);
 }
 
 const cartReducer = (state = initialState, action) => {
