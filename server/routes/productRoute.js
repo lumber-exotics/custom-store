@@ -13,7 +13,7 @@ router.get('/stain', (req, res) => {
   productController.stainQuery(req, res);
 });
 
-router.post('/cart', (req, res) => {
+router.post('/cart', (req, res, next) => {
   //console.log('api post reached');
   //console.log(req.body);
   productController.createCart(req, res);
