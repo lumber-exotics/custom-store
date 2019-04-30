@@ -22,7 +22,7 @@ const cartReducer = (state = initialState, action) => {
     case types.SELECT_STAIN:
       return {
         ...state,
-        stain: {type: action.payload.stain, price: action.payload.price},
+        stain: {type: action.payload.type, price: action.payload.price},
         total: calcTotal(state.base, state.wood.price,action.payload.price)
       };
     default:
